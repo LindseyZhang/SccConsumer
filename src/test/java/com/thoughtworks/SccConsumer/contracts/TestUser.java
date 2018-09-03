@@ -22,7 +22,7 @@ public class TestUser {
 	@Test
 	public void test_get_users() {
 		final String users = restTemplate.getForObject("/users", String.class);
-		final String expectedUsers = "[{\"username\":\"Zhang san\"}]";
+		final String expectedUsers = "[{\"username\":\"Zhang san\",\"country\":\"China\"},{\"username\":\"Steven Jobs\",\"country\":\"US\"}]";
 		assertThat(users).isEqualTo(expectedUsers);
 	}
 }
